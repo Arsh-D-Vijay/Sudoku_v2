@@ -27,3 +27,11 @@ If having problem in viewing the ipython notebook refer here:
 * Sudoku_Solver_Main_v2 --> https://nbviewer.jupyter.org/github/Arsh-D-Vijay/Sudoku_v2/blob/main/Sudoku_Solver_Main_v2.ipynb
 * Sudoku_Solver --> https://nbviewer.jupyter.org/github/Arsh-D-Vijay/Sudoku_v2/blob/main/Sudoku_Solver.ipynb
 * Utility_Functions --> https://nbviewer.jupyter.org/github/Arsh-D-Vijay/Sudoku_v2/blob/main/Utility_Functions.ipynb
+
+
+Things to work on in future:
+
+* Better Accuracy.
+* Better Detection Technique.
+* View solved sudoku on screen feature.
+* Make an interactive app.
