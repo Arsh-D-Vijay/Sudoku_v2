@@ -8,7 +8,7 @@ Added a Sudoku Detection Program that automatically detects the sudoku from an i
 Files:
 
 * Sudoku_Solver : This file contains functions to solve a sudoku puzzle 
-* Sudoku_Solver_Main_v2 : This is the main file where I have used OpenCV library to process the Sudoku Image which then is feeded to our ML model for genration of grid recognisible by our Solver File.
+* Sudoku_Solver_Main_v2 : This is the main file where I have used OpenCV library to process the Sudoku Image which then is feeded to our ML model for genration of grid recognisible by my Solver File.
 * Utility_Functions : This contain all the utility functions used in my Sudoku_Solver_Main_v2 file
 * digit_recog_main.h5 : ML model
 
