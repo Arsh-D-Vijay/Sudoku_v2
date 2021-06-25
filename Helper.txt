@@ -1,0 +1,94 @@
+
+Functions Info:
+
+# cv2.cvtColor(src,color change)
+	eg: cv2.COLOR_BGR2GRAY or cv2.COLOR_BGR2RGB etc
+    
+    This function helps to change image to different color channels/schemes
+---------------------------------------------------------------------------------------    
+
+# cv2.GaussianBlur(src, kernel_size, border) --> To introduce blur, Kernel size can always
+	be odd ,kernel size is the effective region of gaussian blur
+    
+    This function adds blur effect in image
+    Why we want blur in image?
+    A sharp image will have too many features in it and if we want to highlight our main object we will use blur
+------------------------------------------------------------------------------------------------------------------------------    
+    
+# cv2.AdaptiveThreshold(src, outValue, adaptive_method(0-->ADAPTIVE_THRESH_MEAN_C,1-->ADAPTIVE_THRESH_GAUSSIAN_C),
+	threshold_type(0-->thresh_binary,1-->thresh_binary_inv),blocksize(alwasys odd),constant_value)
+    
+	Thresholding is a method to filter out values as per given constraint number known as threshold value 'T'.
+    In Adaptive Thresholding we don't need to supply the T, the algorithm itself recognise it and differentiate features.
+    OpenCv Thresholding function:
+    Basic : Assign Threshold value.
+    Otsu : Automatically assign threshold value for whole image.
+    Adaptive : Automatically assign threshold value for local space.
+    
+	Benefits of having an adaptive T:
+1.  Due to variations in lighting conditions, shadowing, etc., it maybe that one value of T will work for a certain part of the input image.
+2.  No need to supply value of 'T' (Saving from Guessing game of finding the optimal T)
+    
+	Working Assumption:
+    The general assumption that underlies all adaptive thresholding methods is that smaller regions of an image are more likely to have approximately uniform illumination.
+    
+	outValue: Its the output value of our thresholding
+
+	Adaptive Method:
+    Mean : Using mean of neighbourhood pixels to compute T
+    Gaussian : Using Gaussian mean to compute T
+    
+	Block Size: Neighbourhood size to look into
+    
+	Constant_value: For tuning threshold value
+-----------------------------------------------------------------------------------------------------------------------------
+#cv2.imread(path)
+	Read Image file
+
+-----------------------------------------------------------------------------------------------------------------------------
+#cv2.resize(src, resize_shape)
+	resize the image file, we could also give scaling functions for x and y axis seprately
+
+=============================================================================================================================
+Contours --> Contours are the curves that connects points with same color or intensity
+	Shape Detection
+
+#cv2.findContours(src, mode, method) 
+	mode -> contour retrieval modes
+	method -> contour approximation methods
+
+---> findContours return 2 things --> Contours and Hierarchy
+-----------------------------------------------------------------------------------------------------------------------------
+# cv2.drawContours(src, contours, contour_index, color, thickness)
+--> To draw contour on an image (src) , contour_index = -1 to draw all contours else specify index
+
+-----------------------------------------------------------------------------------------------------------------------------
+# cv2.ContourArea(contour[i])
+--> To find area of Contour i
+
+-----------------------------------------------------------------------------------------------------------------------------
+# cv2.arcLength(contour, closed_shape)
+--> calculate perimeter of contour , second argurment is to specify for closed shape or not (True or False)
+
+-----------------------------------------------------------------------------------------------------------------------------
+# cv3.approxPolyDp(img, epsilon, closed_shape)
+--> Approximates type of polygon it is
+--> epsilon -> Parameter specifying the approximation accuracy. This is the maximum distance between the original curve and its approximation.
+
+=============================================================================================================================
+# cv2.getPerspectiveTransform(pts1,pts2)
+--> changes the perspective of src image points pts1 to pts2 in destination image
+
+-----------------------------------------------------------------------------------------------------------------------------
+# cv2.warpPerspective(img, coordinates, return_image_dimension)
+--> to crop out an image
+
+=============================================================================================================================
+np.argmax(array) --> return index of max value
+np.argmin(array) --> return index of min value
+np.max(array) --> return max value
+np.min(array) --> return min value
+np.vsplit(array, num) --> split an array in num sections vertically
+np.hsplit(array,num) --> split an array in num sections horizontally
+np.zeros(shape,datatype) --> create a 0 array of given shape
+
